@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		
+	</style>
+	<script>
+		sessionStorage.check = 0;
+		sessionStorage.score = 0;
+		sessionStorage.delay = 0;
+	</script>
+</head>
+
+<body onload="addevt()">
+	<button id="playG" onclick="init()"> Play Game</button> 
+	<span class="timeRem"> Time remaining: <button id="time">30</button> </span>
+	<span id="res"></span></p>
+	
+	<div id="prog" class="meter red">
+		<span id="myBar" style="width:0%"></span>
+	</div>
+	<span id="playGround">
+		<div id="left"></div>
+		<div id="right"></div>
+		
+		<div id="sh1"></div>
+		<div id="sh2"></div>
+		<div id="sh3"></div>
+		<div id="sh4"></div>
+		<div id="sh5"></div>
+		<div id="sh6"></div>
+		<div id="sh7"></div>
+	</span>
+	<span id="fScore"></span>
+	<script src="tmp.js"></script>
+</body>
+</html>
