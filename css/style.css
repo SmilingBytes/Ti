@@ -1,0 +1,174 @@
+body{width:60%;margin-left:20%}
+span.timeRem {margin-left: 40px;font-size: 20px;}
+#time{position:relative; top:0px;left:2px; font-size: 20px; border-radius: 12px; background-color: #e7e7e7; color:red; padding:5px 15px}
+
+#res{margin-left:25%; width:auto; color:#008cba; font-size:20px; display:inline; border-radius:12px; background-color: #e7e7e7; padding:5px 15px}
+#playG {-webkit-transition-duration: 0.4s; /* Safari */transition-duration: 0.4s; padding:15px 30px; background-color: #4CAF50; color: black; color: white; font-weight:700;}
+#playG:hover {background-color: #008CBA;}
+.gameOver{color:red; text-align:center; margin:30px 0px 15px -20%}
+.finalScore{color:#008cba; text-align:center;margin: 0px 0px 15px -20%}
+/*===================shape ========================*/
+div#right {position: relative;top: -140px;left: 70%;}
+#sh1, #sh2, #sh3, #sh4, #sh5, #sh6, #sh7{ margin: 3px; margin-top: -70px;position: relative;left: 33%;}
+#sh1{margin-top:-160px;}
+#sh7{box-shadow:0 0 0 2px hsl(0, 0%, 53%), 0 0 0 5px hsl(0, 0%, 62%), 0 0 0 9px hsl(0, 0%, 70%), 0 0 0 6px hsl(0, 0%, 80%), 0 0 0 13px hsl(0, 0%, 90%);margin-top: -50px;}
+#left, #right{box-shadow: 0 0 0 2px hsl(0, 0%, 53%), 0 0 0 5px hsl(0, 0%, 62%), 0 0 0 9px hsl(0, 0%, 70%), 0 0 0 15px hsl(0, 0%, 80%), 0 0 0 20px hsl(0, 0%, 90%);margin-top:40px;}
+.shape1 {
+	width: 96px;
+	height: 48px;
+	background: #eee;
+	border-color: #008cba;
+	border-style: solid;
+	border-width: 2px 2px 50px 2px;
+	border-radius: 100%;
+	position: relative;
+}
+.shape1:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #eee;
+	border: 18px solid #008cba;
+	border-radius: 100%;
+	width: 12px;
+	height: 12px;
+}
+.shape1:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #008cba;
+	border: 18px solid #eee;
+	border-radius:100%;
+	width: 12px;
+	height: 12px;
+}
+
+
+.circle{
+	width: 100px;
+	height: 100px;
+	background: rgb(244, 112, 35);
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	border:1px solid #EEE;
+}
+
+/* =========================== Progress bar ============================ */
+.meter { 
+	width:80%;
+	height: 13px;  /* Can be anything */
+	position: relative;
+	margin: 10px 30px 20px 0; /* Just for demo spacing */
+	background: #555;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 5px;
+	-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+	box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.meter > span {
+	display: block;
+	height: 100%;
+	   -webkit-border-top-right-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+		   -moz-border-radius-topright: 8px;
+		-moz-border-radius-bottomright: 8px;
+			   border-top-right-radius: 8px;
+			border-bottom-right-radius: 8px;
+		-webkit-border-top-left-radius: 20px;
+	 -webkit-border-bottom-left-radius: 20px;
+			-moz-border-radius-topleft: 20px;
+		 -moz-border-radius-bottomleft: 20px;
+				border-top-left-radius: 20px;
+			 border-bottom-left-radius: 20px;
+	background-color: rgb(43,194,83);
+	background-image: -webkit-gradient(
+	  linear,
+	  left bottom,
+	  left top,
+	  color-stop(0, rgb(43,194,83)),
+	  color-stop(1, rgb(84,240,84))
+	 );
+	background-image: -moz-linear-gradient(
+	  center bottom,
+	  rgb(43,194,83) 37%,
+	  rgb(84,240,84) 69%
+	 );
+	-webkit-box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	-moz-box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	position: relative;
+	overflow: hidden;
+}
+.meter > span:after, .animate > span > span {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-image: 
+	   -webkit-gradient(linear, 0 0, 100% 100%, 
+		  color-stop(.25, rgba(255, 255, 255, .2)), 
+		  color-stop(.25, transparent), color-stop(.5, transparent), 
+		  color-stop(.5, rgba(255, 255, 255, .2)), 
+		  color-stop(.75, rgba(255, 255, 255, .2)), 
+		  color-stop(.75, transparent), to(transparent)
+	   );
+	background-image: 
+		-moz-linear-gradient(
+		  -45deg, 
+		  rgba(255, 255, 255, .2) 25%, 
+		  transparent 25%, 
+		  transparent 50%, 
+		  rgba(255, 255, 255, .2) 50%, 
+		  rgba(255, 255, 255, .2) 75%, 
+		  transparent 75%, 
+		  transparent
+	   );
+	z-index: 1;
+	-webkit-background-size: 50px 50px;
+	-moz-background-size: 50px 50px;
+	-webkit-animation: move 2s linear infinite;
+	   -webkit-border-top-right-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+		   -moz-border-radius-topright: 8px;
+		-moz-border-radius-bottomright: 8px;
+			   border-top-right-radius: 8px;
+			border-bottom-right-radius: 8px;
+		-webkit-border-top-left-radius: 20px;
+	 -webkit-border-bottom-left-radius: 20px;
+			-moz-border-radius-topleft: 20px;
+		 -moz-border-radius-bottomleft: 20px;
+				border-top-left-radius: 20px;
+			 border-bottom-left-radius: 20px;
+	overflow: hidden;
+}
+
+.animate > span:after {
+	display: none;
+}
+
+@-webkit-keyframes move {
+	0% {
+	   background-position: 0 0;
+	}
+	100% {
+	   background-position: 50px 50px;
+	}
+}
+.red > span {
+	background-color: #f0a3a3;
+	background-image: -moz-linear-gradient(top, #f0a3a3, #f42323);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f0a3a3),color-stop(1, #f42323));
+	background-image: -webkit-linear-gradient(#f0a3a3, #f42323);
+}
